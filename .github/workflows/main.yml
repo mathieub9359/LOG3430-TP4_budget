@@ -15,7 +15,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Find bad version commit
-        run: myscript.py
+        run: python myscript.py
 
       - name: Run tests
         id: test
