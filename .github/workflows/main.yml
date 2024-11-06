@@ -14,11 +14,11 @@ jobs:
       - name: Install packages
         run: pip install -r requirements.txt
 
+      - name: Find bad version commit
+        run: myscript.py
+
       - name: Run tests
         id: test
         run: python manage.py test
 
-      - name: Find bad version commit
-        run: myscript.py
-        if: steps.test.conclusion == 'failure'
           
